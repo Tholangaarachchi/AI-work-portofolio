@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuradha Tholangaarachchi - AI-Enhanced Digital Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+            font-weight: bold;
+        }
+        
+        .name {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .title {
+            font-size: 1.3em;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            font-weight: bold;
+        }
+        
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            margin-bottom: 30px;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            margin-bottom: 25px;
+            font-size: 2em;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+        
+        .skill-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border: 2px solid #667eea;
+        }
+        
+        .skill-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .work-sample {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 20px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .work-sample h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .work-sample p {
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+        }
+        
+        .cta-section {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            text-align: center;
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+        
+        .cta-button {
+            background: white;
+            color: #667eea;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .testimonial {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+            border-left: 4px solid white;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .name {
+                font-size: 2em;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="profile-img">AT</div>
+            <h1 class="name">Anuradha Tholangaarachchi</h1>
+            <p class="title">AI-Enhanced Digital Solutions Specialist | IT Graduate</p>
+            <div class="contact-info">📧 AnurAnuradhanethmi646@gmail.com</div>
+        </div>
+        
+        <!-- About Section -->
+        <div class="section">
+            <h2>About Me</h2>
+            <p>Welcome! I'm Anuradha, an IT diploma graduate specializing in AI-enhanced digital solutions. I combine traditional creative skills with cutting-edge AI technology to deliver exceptional results for businesses and individuals. My expertise spans content creation, design, translation, and research - all powered by the latest AI tools to ensure efficiency, quality, and innovation.</p>
+        </div>
+        
+        <!-- Services Section -->
+        <div class="section">
+            <h2>My Services</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">✍️</div>
+                    <h3>AI-Enhanced Content Writing</h3>
+                    <p>Blog posts, articles, web content, and copywriting optimized with AI for SEO and engagement</p>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>Creative Design Solutions</h3>
+                    <p>Logo design, branding, social media graphics, and visual content creation using AI-powered tools</p>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
+                    <h3>Professional Translation</h3>
+                    <p>Accurate Sinhala-English translation services enhanced with AI for consistency and cultural context</p>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">🔍</div>
+                    <h3>Research & Analysis</h3>
+                    <p>Comprehensive research assistance, data analysis, and market insights powered by AI technology</p>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">🖼️</div>
+                    <h3>AI Image Generation</h3>
+                    <p>Custom image creation, product mockups, and visual assets using advanced AI image generation tools</p>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">⚡</div>
+                    <h3>Digital Automation</h3>
+                    <p>Streamline your workflow with AI-powered automation solutions and digital optimization</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Work Sample Section -->
+        <div class="section">
+            <h2>Featured Work Sample</h2>
+            <div class="work-sample">
+                <h3>📝 Content Writing Sample: "The Mystery of Ghosts"</h3>
+                <p>Ghosts have long intrigued humanity, captivating our imaginations with tales of the supernatural. Defined as the spirits or souls of the deceased, ghosts are believed to linger on Earth due to unfinished business or strong emotional ties.</p>
+                
+                <p>Throughout history, various cultures have their interpretations of ghosts, with legends and folklore shaping their narratives. Famous haunted locations like the Tower of London and Aokigahara Forest draw interest for their eerie stories.</p>
+                
+                <p>While many dismiss ghosts as fiction, some researchers suggest scientific explanations for ghostly encounters, often linked to environmental factors or psychological conditions. Ultimately, whether considered real or merely symbolic, ghosts reflect our fears and the mysteries surrounding life after death, prompting us to ponder questions about existence.</p>
+                
+                <p><strong>Have you ever had a ghostly experience? Share your thoughts!</strong></p>
+            </div>
+        </div>
+        
+        <!-- Why Choose Me Section -->
+        <div class="section">
+            <h2>Why Choose My Services?</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🚀</div>
+                    <h3>AI-Powered Efficiency</h3>
+                    <p>Faster delivery without compromising quality using the latest AI technologies</p>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">💡</div>
+                    <h3>Creative Innovation</h3>
+                    <p>Fresh, modern approaches combining human creativity with AI capabilities</p>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">🎯</div>
+                    <h3>Results-Driven</h3>
+                    <p>Focus on achieving your specific goals with measurable outcomes</p>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">🌟</div>
+                    <h3>Quality Assurance</h3>
+                    <p>Rigorous quality checks and unlimited revisions until you're satisfied</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Testimonials Section -->
+        <div class="section">
+            <h2>Client Testimonials</h2>
+            <div class="testimonial">
+                <p><em>"Anuradha's AI-enhanced content writing transformed our website traffic. Professional, efficient, and always delivers on time!"</em></p>
+                <p><strong>- Local Business Owner</strong></p>
+            </div>
+            <div class="testimonial">
+                <p><em>"Exceptional logo design and branding work. The AI-powered approach brought fresh perspectives we hadn't considered."</em></p>
+                <p><strong>- Startup Founder</strong></p>
+            </div>
+        </div>
+        
+        <!-- Call to Action -->
+        <div class="cta-section">
+            <h2>Ready to Get Started?</h2>
+            <p>Let's discuss how AI-enhanced solutions can elevate your project. Available for both full-time and part-time collaborations.</p>
+            <button class="cta-button" onclick="window.location.href='mailto:AnurAnuradhanethmi646@gmail.com'">
+                Contact Me Today
+            </button>
+            <div class="testimonial">
+                <p><strong>💼 Available for:</strong> Full-time positions | Part-time projects | Freelance work</p>
+                <p><strong>🌐 Platforms:</strong> Upwork | Fiverr | Direct collaboration</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
